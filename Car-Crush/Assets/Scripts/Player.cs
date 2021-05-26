@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] float minY = 0.66f;
     [SerializeField] float maxY = 9.28f;    
     
-    void Update()
+    void FixedUpdate()
     {
         HorizontalMovement();
         VerticalMovement();
