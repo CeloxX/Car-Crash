@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6365532942265629507}
   - component: {fileID: 3083688284220213488}
   m_Layer: 0
-  m_Name: EnemyRedCar
+  m_Name: EnemyGreenCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,4 +96,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveConfig: {fileID: 11400000, guid: c811510a5fa36e7488bb13e04c8399df, type: 2}
-  moveSpeed: 5
+  moveSpeed: 3

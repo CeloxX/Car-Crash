@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6365532942265629507}
   - component: {fileID: 3083688284220213488}
   m_Layer: 0
-  m_Name: EnemyRedCar
+  m_Name: EnemyBlackCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 431270345
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6ef93a266ceb8a7449add2450de0cefd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dcf34a1fd03f83c47ab81e18b9924be2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,5 +95,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b735c0d3e9c13a4cbc45c66bca6bd86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfig: {fileID: 11400000, guid: c811510a5fa36e7488bb13e04c8399df, type: 2}
-  moveSpeed: 5
+  waveConfig: {fileID: 11400000, guid: b5a83589d5c3fa944b731273cffaf388, type: 2}
+  moveSpeed: 2
