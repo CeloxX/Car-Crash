@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6365532942265629507}
   - component: {fileID: 3083688284220213488}
   - component: {fileID: -7594508883780430533}
-  - component: {fileID: 3501297401302902621}
+  - component: {fileID: 7387396491966576831}
+  - component: {fileID: -3590963169888273499}
   m_Layer: 7
   m_Name: EnemyRedCar
   m_TagString: Untagged
@@ -123,7 +124,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.88687015, y: 1.8902578}
   m_EdgeRadius: 0
---- !u!50 &3501297401302902621
+--- !u!114 &7387396491966576831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5910312132875738014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867dca812ae87574f8cc263840832f6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &-3590963169888273499
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -131,14 +144,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5910312132875738014}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

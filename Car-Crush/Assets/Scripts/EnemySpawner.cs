@@ -36,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
             waypoints = waveConfig.GetWaypoints();
             var newEnemy = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], waypoints[0].transform.position, transform.rotation);
             newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
-            yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
+            yield return new WaitForSeconds(GameSession.Instance.GetTimeBetweenSpawns());
         }
     }
 }

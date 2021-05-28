@@ -483,8 +483,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   lives: 5
-  scoreText: {fileID: 0}
-  livesText: {fileID: 0}
+  scoreText: {fileID: 679377459}
+  livesText: {fileID: 1718432284}
+  timeBetweenSpawns: 2.3
+  moveSpeed: 3
 --- !u!4 &1441788344
 Transform:
   m_ObjectHideFlags: 0
@@ -541,7 +543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599118859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.04, y: 16.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -633,57 +635,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3104182315573880969, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
-      propertyPath: maxX
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3104182315573880969, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
-      propertyPath: maxY
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3104182315573880969, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
-      propertyPath: minX
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3104182315573880969, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
-      propertyPath: minY
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3104182315573880970, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
       propertyPath: m_Name
       value: PlayerCar
       objectReference: {fileID: 0}
-    - target: {fileID: 3104182315573880981, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3104182315573880981, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3104182315573880981, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3104182315573880981, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
-      propertyPath: m_CollisionDetection
+    - target: {fileID: 3104182315573880982, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
+      propertyPath: m_IsTrigger
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3104182315573880982, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
-      propertyPath: m_Size.x
-      value: 0.9156699
-      objectReference: {fileID: 0}
-    - target: {fileID: 3104182315573880982, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
-      propertyPath: m_Size.y
-      value: 1.8911177
-      objectReference: {fileID: 0}
-    - target: {fileID: 3104182315573880982, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0024402142
-      objectReference: {fileID: 0}
-    - target: {fileID: 3104182315573880982, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.01815039
       objectReference: {fileID: 0}
     - target: {fileID: 3104182315573880983, guid: 7c80cb2c0a39b404a88d3a8c8b7f5dd7, type: 3}
       propertyPath: m_RootOrder
