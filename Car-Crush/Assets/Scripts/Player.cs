@@ -5,34 +5,29 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private const string HORIZONTAL_AXIS = "Horizontal";
-    private const string VERTICAL_AXIS = "Vertical";
+    
 
     [SerializeField] float moveSpeed = 10f;
+    [SerializeField] VirtualJoystickHandler jsMovement;
 
     [Header("Limits for player movement")]
     [SerializeField] float minX = 1.5f;
     [SerializeField] float maxX = 7.5f;
     [SerializeField] float minY = 0.66f;
-    [SerializeField] float maxY = 9.28f;    
+    [SerializeField] float maxY = 9.28f;
+
+    private Vector3 direction;
     
     void FixedUpdate()
     {
-        HorizontalMovement();
-        VerticalMovement();
-    }
+        direction = jsMovement.InputDirection;
 
-    private void HorizontalMovement()
-    {
-        var deltaX = Input.GetAxis(HORIZONTAL_AXIS) * Time.deltaTime * moveSpeed;
-        var newXpos = Mathf.Clamp((transform.position.x + deltaX), minX, maxX);
-        transform.position = new Vector2(newXpos, transform.position.y);
+        if(direction.magnitude != 0)
+        {
+            transform.position += direction * moveSpeed * Time.deltaTime;
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX), Mathf.Clamp(transform.position.y, minY, maxX), 0f);
+        }
+        
     }
-
-    private void VerticalMovement()
-    {
-        var deltaY = Input.GetAxis(VERTICAL_AXIS) * Time.deltaTime * moveSpeed;
-        var newYpos = Mathf.Clamp((transform.position.y + deltaY), minY, maxY);
-        transform.position = new Vector2(transform.position.x, newYpos);
-    }
+    
 }
