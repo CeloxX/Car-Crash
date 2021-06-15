@@ -24,8 +24,8 @@ public class VirtualJoystickHandler : MonoBehaviour, IDragHandler, IPointerUpHan
 
         RectTransformUtility.ScreenPointToLocalPointInRectangle(jsContainer.rectTransform, ped.position, ped.pressEventCamera, out position);
 
-        position.x = (position.x / jsContainer.rectTransform.sizeDelta.x);
-        position.y = (position.y / jsContainer.rectTransform.sizeDelta.y);
+        position.x /= jsContainer.rectTransform.sizeDelta.x;
+        position.y /= jsContainer.rectTransform.sizeDelta.y;
                
         float x = position.x * 2;
         float y = position.y * 2;

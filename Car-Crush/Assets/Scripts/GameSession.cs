@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
 
     [SerializeField] int score = 0;
     [SerializeField] int lives = 5;
-    [SerializeField] Text scoreText;
     [SerializeField] Text livesText;
     [SerializeField] float timeBetweenSpawns = 2.3f;
     [SerializeField] float moveSpeed = 3f;
@@ -37,19 +37,19 @@ public class GameSession : MonoBehaviour
     
     void Start()
     {
-        scoreText.text = score.ToString();
         livesText.text = lives.ToString();
         StartCoroutine(SpeedUpGame());
     }
 
     public float GetMoveSpeed() => moveSpeed;
     public float GetTimeBetweenSpawns() => timeBetweenSpawns;
+    public int GetScore() => score;
 
     public void AddToScore(int pointsToAdd)
     {
         score += pointsToAdd;
         CheckToAddLife(pointsToAdd);
-        scoreText.text = score.ToString();
+        
     }
 
     private void CheckToAddLife(int pointsToAdd)
@@ -75,7 +75,8 @@ public class GameSession : MonoBehaviour
 
     private IEnumerator LoadLossScreen()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene("LossScene");
     }
     private IEnumerator SpeedUpGame()
     {

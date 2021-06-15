@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
         if(direction.magnitude != 0)
         {
-            transform.position += direction * moveSpeed * Time.deltaTime;
+            transform.position += moveSpeed * Time.deltaTime * direction;
             transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX), Mathf.Clamp(transform.position.y, minY, maxX), 0f);
         }
         
